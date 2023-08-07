@@ -267,10 +267,12 @@ body {
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
+  text-align: center;
 }
 
 .rate-text {
   color: white;
+  font-size: 14px;
 }
 
 /* Media queries para hacer el carrusel responsive */
@@ -523,3 +525,54 @@ body {
   width: 200px;
   height: fit-content;
 }
+
+
+
+
+
+
+/*  */
+
+.landing-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: fit-content;
+  color: white;
+}
+
+.landing-info {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: fit-content;
+}
+
+.landing-info-img{
+  padding-left: 12px;
+  margin: 20px 0 ;
+  max-width: 350px;
+  max-height: 450px;
+  border-radius: 20px;
+  box-shadow: 0px 30px 0px 0px #0000;
+}
+
+.landing-info-text{
+  position: relative;
+  left: 2%;
+  top: 4rem;
+}
+
+.landing-rate-info{
+  display: flex;
+  gap: 16px;
+}
+
+.landing-info-text-description{
+  position: relative;
+  bottom: 18px;
+  left: 4px;
+}
+

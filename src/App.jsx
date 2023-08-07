@@ -1,23 +1,16 @@
-import Header from './Components/Header'
-import LandingSearch from './Components/LandingSearch'
-import './App.css'
-import Tendencias from './Components/Tendencias'
-import LatesAdvances from './Components/LatestAdvances'
-import Popular from './Components/Popular'
-import Footer from './Components/Footer'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './Components/views/Home';
+import MovieDetails from './Components/views/MovieDetails';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <Header/>
-      <LandingSearch/>
-      <Tendencias/>
-      <LatesAdvances/>
-      <Popular/>
-      <Footer/>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/MovieDetails" element={<MovieDetails/>} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

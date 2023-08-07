@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const MovieCard = ({ title, posterPath, releaseDate, rate }) => {
@@ -6,6 +6,7 @@ const MovieCard = ({ title, posterPath, releaseDate, rate }) => {
 
     
     return (
+        <Link to={"MovieDetails"} style={{textDecoration:"none", color:"black"}}>
         <div className="movie-card">
             <div className="movie-image">
                 <img
@@ -25,6 +26,7 @@ const MovieCard = ({ title, posterPath, releaseDate, rate }) => {
             </div>
             
         </div>
+        </Link>
     );
 };
 
