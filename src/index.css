@@ -1,0 +1,525 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #0A243F;
+  z-index: 1;
+}
+
+.header-logo {
+  max-width: 7rem;
+  max-height: 7rem;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.header-text {
+  color: white;
+  padding-left: 15px;
+  white-space: nowrap;
+}
+
+.header-left-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-right-content {
+  display: flex;
+  padding-right: 15px;
+  align-items: center;
+}
+
+/* Estilos para pantallas con un ancho máximo de 768px (dispositivos móviles) */
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+/* ------------------- */
+
+/* Establece una altura para el componente para que se pueda centrar verticalmente */
+.landing-container {
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.landingImg {
+  display: flex;
+  flex-direction: column;
+  width: 90%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 20rem; /* Ajusta el tamaño de la imagen según tus necesidades */
+  background-color: #ccc; /* Solo para ilustrar la imagen */
+}
+
+.landing-h1{
+  font-size: 50px;
+  padding-left: 2.5%;
+  margin: 0;
+  padding-top: 7%;
+}
+
+.landing-h2{
+  font-size: 28px;
+  padding-left: 2.5%;
+}
+
+.input-container {
+  padding-left: 2.5%;
+  display: inline-flex; /* Utilizamos flexbox para colocar los elementos en la misma línea */
+  align-items: center; /* Centramos verticalmente los elementos */
+  width: 90%; /* Ajusta el ancho del contenedor según tus necesidades */
+  border: 1px solid #ccc;
+  border-radius: 35px;
+}
+
+.search-bar {
+  flex: 1; /* El campo de texto se expandirá para ocupar todo el espacio disponible */
+  height: 2rem;
+  border-radius: 35px 0 0 35px;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  
+}
+
+.search-button {
+  width: 150px;
+  font-size: 16px;
+  height: 3rem;
+  color: white;
+  border: none;
+  border-radius: 0 35px 35px 0; /* Ajustamos los bordes del botón para que coincida con el contenedor */
+  cursor: pointer;
+  margin: 0; /* Eliminamos cualquier margen que pueda haber entre los elementos */
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,91,121,1) 45%, rgba(0,12,36,1) 100%);
+}
+
+/* ---------------- */
+
+.main-slider{
+  background-image: url("../src/assets/layered-peaks-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  width: 100%;
+  height: 100%;
+}
+
+
+.trending-container{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.trending{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  height: fit-content;
+  position: relative;
+  left: 50px;
+  top: 25px;
+}
+
+.title-slider{
+  position: relative;
+  left: 10px;
+  font-size: 24px;
+  justify-content: space-between;
+  color: black;
+}
+
+.title-date-slider{
+  display: flex;
+  position: absolute;
+  left: 150px;
+  bottom: 30px;
+  gap: 10px;
+  border-radius: 60px;
+  border: solid 1px;
+}
+
+
+.selector-wrapper {
+  position: relative;
+  display: flex;
+  margin: 1px;
+  align-items: center;
+  width: fit-content;
+  border-radius: 35px;
+  border: solid 2px #0A243F;
+  left: 1rem;
+}
+
+.option {
+  text-align: center;
+  font-size: 12px;
+  margin: 5px;
+  height: 30px;
+  padding-top: 15px;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 35px;
+}
+
+.selected {
+  color: rgb(0,212,255);
+  color: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,121,13,1) 70%);
+  transition: background-color 0.5s ease;
+  background-color: #0A243F;
+}
+
+
+
+/*  */
+
+
+/* Estilos de la tarjeta de películas */
+.movie-card {
+  width: 10rem;
+  height: fit-content;
+  border: none;
+  overflow: hidden;
+  margin: 10px;
+  gap: 10px;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0px 30px 0px 0px #0000;
+}
+
+.movie-info{
+  position: relative;
+  bottom: 24px;
+  left: 4px;
+}
+
+.movie-card .movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-card .movie-release-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.movie-card .movie-overview {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* Estilos del carrusel */
+.slick-slider {
+  width: 100%;
+  overflow: hidden; /* Para ocultar las diapositivas que están fuera de la vista */
+}
+
+.slick-slide {
+  width: 100%; /* Ocuparán todo el ancho del carrusel */
+  outline: none; /* Elimina el contorno al hacer clic */
+}
+
+/* Estilos del círculo de valoración (rate) */
+.circle-rate {
+  font-size: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #0A243F;
+  position: relative;
+  bottom: 15px;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.rate-text {
+  color: white;
+}
+
+/* Media queries para hacer el carrusel responsive */
+@media screen and (max-width: 768px) {
+  .slick-slider {
+    padding: 0 20px; /* Ajusta los márgenes del carrusel para evitar que los elementos se corten en pantallas pequeñas */
+  }
+
+  .slick-slide {
+    width: 80%; /* Ajusta el ancho de cada slide para que se muestre más contenido en pantallas pequeñas */
+  }
+
+  .movie-card img {
+    height: 150px; /* Ajusta la altura de la imagen según tus necesidades para pantallas más pequeñas */
+  }
+}
+
+
+
+/*  */
+
+.main-advances{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  grid-gap: 20px;
+  padding: 1rem 0 0 0;
+  width: 100%;
+  height: 400px;
+  background-image: url("../src/assets/layered-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  box-shadow: 0 0 30px 0;
+}
+
+@media screen and (max-width: 1431px) {
+  /* Cambiar a 2 columnas en pantallas medianas */
+  .main-advances {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 716px) {
+  /* Cambiar a 1 columna en pantallas pequeñas */
+  .main-advances {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advances-header{
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 4rem;
+  width: 90%;
+  height: auto;
+}
+
+.advances-title{
+  font-size: 24px;
+  justify-content: space-between;
+  color: white;
+}
+
+.advances-container{
+  display: flex;
+  position: absolute;
+  top: 27%;
+  left: 2rem;
+  width: 95%;
+  height: fit-content;
+  background-color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 20px; 
+  box-shadow: 0px 30px 0px 0px #0000;
+  background-position: center; /* Centra la imagen de fondo */
+  box-shadow: 20px;
+  transition: all .5s;
+
+}
+
+
+.trailer-card {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat;
+  box-shadow: 20px;
+  transition: all 0.3s;
+  
+}
+
+.trailer-card:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 0;
+  
+}
+
+.trailer-card-title{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: max-content;
+  justify-content: baseline;
+  color: rgb(255, 243, 243);
+  background-color: #0101012e;
+}
+
+/* ================ */
+
+
+.selector-wrapper2 {
+  position: relative;
+  display: flex;
+  margin: 1px;
+  align-items: center;
+  width: fit-content;
+  border-radius: 35px;
+  left: 1rem;
+}
+
+.option2 {
+  text-align: center;
+  font-size: 12px;
+  margin: 5px;
+  height: 30px;
+  padding-top: 15px;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid rgb(0,212,255);
+  border-radius: 35px;
+  color: white;
+}
+
+.selected2 {
+  color: #ccc;
+  transition: background-color 0.5s ease;
+  color: white;
+  background-color: whitesmoke;
+  color: rgb(0,212,255);
+  color: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,121,13,1) 70%);
+}
+
+
+/*  */
+
+
+
+.popular-container{
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 1431px) {
+  .popular-container{
+    top: 7rem; /* Ajusta los márgenes del carrusel para evitar que los elementos se corten en pantallas pequeñas */
+  }
+}
+
+.popular{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 450px;
+  position: relative;
+  left: 50px;
+  top: 25px;
+}
+
+.main-popular{
+  background-image: url("../src/assets/layered-peaks-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  width: 100%;
+  height: 100%;
+}
+
+/*  */
+
+
+
+
+/* Estilos para el footer */
+.footer {
+  position: relative;
+  top: 4rem;
+  background-color: #0A243F;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.footer-section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: rgb(0,212,255);
+
+}
+
+
+.footer-logo img {
+  position: relative;
+  top: 50%;
+  right: 5rem;
+  width: 200px;
+  height: fit-content;
+}
