@@ -89,7 +89,9 @@ function Popular() {
                                         releaseDate={movie.release_date || movie.first_air_date}
                                         overview={movie.overview}
                                         rate={(movie.vote_average)}
+                                        id={(movie.id)}
                                     />
+                                    {console.log(movie)}
                                 </div>
                             </>
                         ))}

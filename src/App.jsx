@@ -6,8 +6,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/MovieDetails" element={<MovieDetails/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/MovieDetails/:movieId" element={<MovieDetails />} />
       </Routes>
     </Router>
   );

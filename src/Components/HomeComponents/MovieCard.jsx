@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const MovieCard = ({ title, posterPath, releaseDate, rate }) => {
+const MovieCard = ({ title, posterPath, releaseDate, rate, id }) => {
     const baseURL = 'https://image.tmdb.org/t/p/w500'; // URL base para las imágenes de las películas\
 
     
     return (
-        <Link to={"MovieDetails"} style={{textDecoration:"none", color:"black"}}>
+        <Link to={`MovieDetails/${id}`} style={{textDecoration:"none", color:"black"}}>
         <div className="movie-card">
             <div className="movie-image">
                 <img
@@ -36,6 +36,7 @@ MovieCard.propTypes = {
     releaseDate: PropTypes.string.isRequired,
     overview: PropTypes.string.isRequired,
     rate: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
 };
 
 export default MovieCard;

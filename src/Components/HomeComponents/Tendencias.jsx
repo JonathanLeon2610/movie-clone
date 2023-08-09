@@ -92,6 +92,7 @@ function Tendencias() {
                                         releaseDate={movie.release_date || movie.first_air_date}
                                         overview={movie.overview}
                                         rate={(movie.vote_average)}
+                                        id={(movie.id)}
                                     />
                                 </div>
                             </>

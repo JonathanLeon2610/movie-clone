@@ -90,7 +90,6 @@ function LatesAdvances() {
                         >
                             <div className="trailer-card-title">
                                 <h1>{movie.original_title || movie.name}</h1>
-                                {console.log(movie)}
                             </div>
                         </div>
                     ))}
